@@ -308,7 +308,7 @@ bool Octree_<T,dim>::build(const DP& pts, DataContainer&& datas, BoundingBox && 
 	this->bb.radius = bb.radius;
 
 	//Check stop condition
-	if((bb.radius*2.0 <= maxSizeByNode) or (datas.size() <= maxDataByNode))
+	if((bb.radius*2.0 <= maxSizeByNode) || (datas.size() <= maxDataByNode))
 	{		
 		//insert data
 		data.insert(data.end(), 
@@ -363,7 +363,7 @@ bool Octree_<T,dim>::build(const DP& pts, DataContainer&& datas, BoundingBox && 
 
 	for(auto& f : futures) f.get();
 
-	return (!isLeaf() and ret);
+	return (!isLeaf() && ret);
 }
 
 //------------------------------------------------------------------------------

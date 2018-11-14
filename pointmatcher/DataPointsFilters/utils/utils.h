@@ -39,6 +39,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <vector>
 #include <algorithm>
 
+#define _USE_MATH_DEFINES
+#include <math.h>
+
 namespace PointMatcherSupport
 {
 

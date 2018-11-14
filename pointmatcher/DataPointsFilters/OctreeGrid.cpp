@@ -47,7 +47,7 @@ template <typename T>
 template<std::size_t dim>
 bool OctreeGridDataPointsFilter<T>::FirstPtsSampler::operator()(Octree_<T,dim>& oc)
 {
-	if(oc.isLeaf() and not oc.isEmpty())
+	if(oc.isLeaf() && !oc.isEmpty())
 	{			
 		auto* data = oc.getData();	
 		const auto& d = (*data)[0];
@@ -98,7 +98,7 @@ template<typename T>
 template<std::size_t dim>
 bool OctreeGridDataPointsFilter<T>::RandomPtsSampler::operator()(Octree_<T,dim>& oc)
 {
-	if(oc.isLeaf() and not oc.isEmpty())
+	if(oc.isLeaf() && !oc.isEmpty())
 	{			
 		auto* data = oc.getData();
 		const std::size_t nbData = (*data).size() - 1;
@@ -146,7 +146,7 @@ template<typename T>
 template<std::size_t dim>
 bool OctreeGridDataPointsFilter<T>::CentroidSampler::operator()(Octree_<T,dim>& oc)
 {
-	if(oc.isLeaf() and not oc.isEmpty())
+	if(oc.isLeaf() && !oc.isEmpty())
 	{			
 		const int featDim(pts.features.rows());
 		const int descDim(pts.descriptors.rows());
@@ -218,7 +218,7 @@ template<typename T>
 template<std::size_t dim>
 bool OctreeGridDataPointsFilter<T>::MedoidSampler::operator()(Octree_<T,dim>& oc)
 {
-	if(oc.isLeaf() and not oc.isEmpty())
+	if(oc.isLeaf() && !oc.isEmpty())
 	{		
 		auto* data = oc.getData();
 		const std::size_t nbData = (*data).size();

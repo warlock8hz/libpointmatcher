@@ -47,9 +47,9 @@ using namespace PointMatcherSupport;
 
 typedef PointMatcherSupport::Parametrizable Parametrizable;
 typedef PointMatcherSupport::Parametrizable P;
-typedef Parametrizable::Parameters Parameters;
-typedef Parametrizable::ParameterDoc ParameterDoc;
-typedef Parametrizable::ParametersDoc ParametersDoc;
+typedef PointMatcherSupport::Parametrizable::Parameters Parameters;
+typedef PointMatcherSupport::Parametrizable::ParameterDoc ParameterDoc;
+typedef PointMatcherSupport::Parametrizable::ParametersDoc ParametersDoc;
 
 template<typename T>
 PointToPlaneWithCovErrorMinimizer<T>::PointToPlaneWithCovErrorMinimizer(const Parameters& params):

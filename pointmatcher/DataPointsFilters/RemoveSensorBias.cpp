@@ -41,6 +41,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <boost/format.hpp>
 
+#define _USE_MATH_DEFINES
+#include <math.h>
 
 template<typename T>
 RemoveSensorBiasDataPointsFilter<T>::RemoveSensorBiasDataPointsFilter(const Parameters& params):
@@ -113,7 +115,7 @@ void RemoveSensorBiasDataPointsFilter<T>::inPlaceFilter(DataPoints& cloud)
 
 		//check if the incidence angle could be estimated.
 		//For angles very close to 90 degrees, a small error of estimation could change drastically the correction, so we skip those points.
-		if(not std::isnan(incidence) and incidence >= 0. and incidence < angleThreshold)
+		if(!std::isnan(incidence) && incidence >= 0. && incidence < angleThreshold)
 		{
 			const T correction = k1 * diffDist(depth, incidence, aperture) + k2 * ratioCurvature(depth, incidence, aperture);
 

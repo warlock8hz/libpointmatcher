@@ -1,5 +1,8 @@
 #include "../utest.h"
 
+#define _USE_MATH_DEFINES
+#include <math.h>
+
 using namespace std;
 using namespace PointMatcherSupport;
 
@@ -463,7 +466,7 @@ TEST_F(DataFilterTest, OctreeGridDataPointsFilter)
 
 				const DP filteredCloud = octreeFilter->filter(cloud);
 			
-				if(maxData==1 and maxSize==0.)
+				if(maxData==1 && maxSize==0.)
 				{
 					// 1/pts by octants + validate parallel build
 					// the number of point should not change

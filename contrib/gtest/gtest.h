@@ -55,6 +55,8 @@
 #include <ostream>
 #include <vector>
 
+#include <corecrt_io.h>
+
 // Copyright 2005, Google Inc.
 // All rights reserved.
 //

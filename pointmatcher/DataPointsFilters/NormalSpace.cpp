@@ -38,6 +38,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <unordered_map>
 #include <random>
 
+#define _USE_MATH_DEFINES
+#include <math.h>
+
 // NormalSpaceDataPointsFilter
 template <typename T>
 NormalSpaceDataPointsFilter<T>::NormalSpaceDataPointsFilter(const Parameters& params) :
@@ -125,9 +128,9 @@ void NormalSpaceDataPointsFilter<T>::inPlaceFilter(DataPoints& cloud)
 
 		//Check if not already all sampled
 		bool isEntireBucketSampled = true;
-		for(std::size_t id = 0; id < bucketSize and isEntireBucketSampled; ++id)
+		for(std::size_t id = 0; id < bucketSize && isEntireBucketSampled; ++id)
 		{
-			isEntireBucketSampled = isEntireBucketSampled and (curBucket[id] == alreadySampled);
+			isEntireBucketSampled = isEntireBucketSampled && (curBucket[id] == alreadySampled);
 		}
 
 		if(isEntireBucketSampled)

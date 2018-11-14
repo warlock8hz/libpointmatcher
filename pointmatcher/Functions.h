@@ -36,6 +36,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef __POINTMATCHER_FUNCTIONS_H
 #define __POINTMATCHER_FUNCTIONS_H
 
+#define _USE_MATH_DEFINES
+#include <math.h>
+
 namespace PointMatcherSupport
 {
 	template<typename T>

@@ -505,19 +505,19 @@ typename PointMatcher<T>::OutlierWeights OutlierFiltersImpl<T>::RobustOutlierFil
 
 	if (scaleEstimator == "mad")
 	{
-		if (iteration <= nbIterationForScale or nbIterationForScale == 0)
+		if (iteration <= nbIterationForScale || nbIterationForScale == 0)
 		{
 			scale = sqrt(input.getMedianAbsDeviation());
 		}
 	} else if (scaleEstimator == "std")
 	{
-		if (iteration <= nbIterationForScale or nbIterationForScale == 0)
+		if (iteration <= nbIterationForScale || nbIterationForScale == 0)
 		{
 			scale = sqrt(input.getStandardDeviation());
 		}
 	} else if (scaleEstimator == "berg")
 	{
-		if (iteration <= nbIterationForScale or nbIterationForScale == 0)
+		if (iteration <= nbIterationForScale || nbIterationForScale == 0)
 		{
 			// The tuning constant is the target scale that we want to reach
 			// It's a bit confusing to use the tuning constant for scaling...
