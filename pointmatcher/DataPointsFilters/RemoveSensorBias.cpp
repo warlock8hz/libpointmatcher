@@ -103,7 +103,7 @@ void RemoveSensorBiasDataPointsFilter<T>::inPlaceFilter(DataPoints& cloud)
 	const std::size_t dim = cloud.features.rows();
 	
 
-	assert(dim == 3 or dim == 4); //check 2D or 3D
+	assert(dim == 3 || dim == 4); //check 2D or 3D
 
 	std::size_t j = 0;
 	for(std::size_t i = 0; i < nbPts; ++i)

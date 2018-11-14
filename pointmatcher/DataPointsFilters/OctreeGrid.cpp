@@ -315,7 +315,7 @@ void OctreeGridDataPointsFilter<T>::inPlaceFilter(DataPoints& cloud)
 {
 	const std::size_t featDim = cloud.features.rows();
 	
-	assert(featDim == 4 or featDim == 3);
+	assert(featDim == 4 || featDim == 3);
 
 	if(featDim==3) //2D case
 		this->sample<2>(cloud);
